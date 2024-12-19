@@ -114,7 +114,6 @@
     </section>
     
     <!-- Projects Section -->
-    <!-- Projects Section -->
     <section id="projects" class="text-center py-8 scroll-mt-16">
         <h2 class="text-3xl font-bold mb-6 text-blue-400">Projects <span class="text-blue-600">&#x2705;</span></h2>
         <div class="space-y-6 px-8">
@@ -200,14 +199,14 @@
         <h3 class="text-3xl font-bold mb-8 text-blue-400">Contact Me</h3>
         <div class="max-w-4xl mx-auto space-y-4">
             <p class="text-lg">Feel free to reach out through any of the following methods:</p>
-            <div class="flex justify-center space-x-6 text-white">
-                <span class="bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 flex items-center">
+            <div class="flex flex-wrap justify-center space-x-6 text-white">
+                <span class="bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 flex items-center mb-4 md:mb-0">
                     <span class="mr-2">&#9993;</span>gaurav.singh2022@vitstudent.ac.in
                 </span>
-                <span class="bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 flex items-center">
+                <span class="bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 flex items-center mb-4 md:mb-0">
                     <span class="mr-2">&#9742;</span>7428970498
                 </span>
-                <span class="bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 flex items-center">
+                <span class="bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 flex items-center mb-4 md:mb-0">
                     <span class="mr-2">&#128100;</span>www.linkedin.com/in/gaurav-singh-806616252
                 </span>
                 <span class="bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 flex items-center">
@@ -216,14 +215,33 @@
             </div>
         </div>
     </section>
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
+        // Smooth scroll for menu items and close mobile menu after click
+        document.querySelectorAll('header a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // Scroll to the section
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
     <!-- Footer -->
     <footer class="text-center py-4 bg-gray-800 text-gray-400">
         <p>&copy; 2024 Gaurav Singh. All rights reserved.</p>
     </footer>
 </body>
 </html>
-
-
-
-    
