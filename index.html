@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaurav's Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+        /* Hover effects for skill cards */
+        .skill-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+        .skill-description {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .skill-card:hover .skill-description {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="bg-gray-900 text-gray-300 py-4 fixed w-full top-0 z-50">
+        <nav class="flex justify-between items-center px-4 md:px-16">
+            <div>
+                <h1 class="text-3xl font-bold text-blue-400">Gaurav Singh</h1>
+            </div>
+            <ul class="hidden md:flex space-x-8 text-lg">
+                <li><a href="#home" class="hover:text-blue-400">Home</a></li>
+                <li><a href="#about" class="hover:text-blue-400">About</a></li>
+                <li><a href="#skills" class="hover:text-blue-400">Skills</a></li>
+                <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+            </ul>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-400 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <ul id="mobile-menu" class="md:hidden hidden space-y-4 text-center bg-gray-900 py-4">
+            <li><a href="#home" class="block text-lg text-gray-300 hover:text-blue-400">Home</a></li>
+            <li><a href="#about" class="block text-lg text-gray-300 hover:text-blue-400">About</a></li>
+            <li><a href="#skills" class="block text-lg text-gray-300 hover:text-blue-400">Skills</a></li>
+            <li><a href="#contact" class="block text-lg text-gray-300 hover:text-blue-400">Contact</a></li>
+        </ul>
+    </header>
+
+    <!-- Home Section -->
+<section id="home" class="flex flex-col items-center justify-center text-center h-[95vh] bg-gray-900 scroll-mt-16" style="background-color: #1a202c">
+    <img src="gaurav.jpg" alt="Gaurav" class="rounded-full w-40 h-40 mb-4 transition-transform duration-500 transform hover:scale-125">
+    <h2 class="text-5xl md:text-6xl font-bold text-blue-400 mt-4">Engineering Student</h2>
+    <p class="mt-5 text-lg md:text-xl max-w-xl text-gray-300">As a dedicated engineering student, I am passionate about coding, web development, and VLSI design.</p>
+    <div class="mt-6">
+        <a href="#contact" class="bg-blue-500 px-6 py-3 rounded-lg text-white text-lg hover:bg-blue-600">Contact Me</a>
+    </div>
+</section>
+
+
+
+    <!-- About Me Section -->
+    <section id="about" class="text-center py-8 px-6 scroll-mt-16">
+        <h2 class="text-3xl font-bold mb-4">About Me</h2>
+            <p class="max-w-4xl mx-auto leading-relaxed text-gray-300">
+                Hello! I am Gaurav Singh, an aspiring VLSI engineer and tech enthusiast student currently pursuing a B.Tech in Electronics and Computer Engineering at Vellore Institute of Technology, Chennai. 
+                With a CGPA of 9.13, I am consistently striving for academic and professional excellence. 
+                I have a keen interest in digital design, VLSI, and FPGA development, and I am always eager to learn new technologies and skills.
+                With a passion for electronics, coding, and problem-solving, I specialize in RTL Design, Verification, and FPGA development. 
+                I have hands-on experience with tools like Xilinx Vivado, ModelSim, and Cadence Virtuoso, which I leverage to design and 
+                simulate complex digital systems. My skills also extend to programming in Verilog, SystemVerilog and C/C++.
+            </p>
+            <p class="mt-4 max-w-4xl mx-auto leading-relaxed text-gray-300">
+                I am a quick learner and enjoy tackling challenging projects that push me to grow both personally and professionally. 
+                I aspire to contribute to cutting-edge innovations in VLSI and digital design while continuously honing my technical skills.
+            </p>
+    </section>
+
+
+    <!-- Education Section -->
+    <section id="education" class="py-8 px-6 bg-gray-900 text-gray-300 text-center">
+        <h2 class="text-3xl font-bold mb-6 text-blue-400">Education <span class="text-blue-600">&#x1F393;</span></h2>
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-gray-800 p-8 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+                <h3 class="text-xl font-semibold mb-2">B.Tech in Electronics and Computer Engineering</h3>
+                <p>Vellore Institute of Technology, Chennai</p>
+                <p>CGPA: 9.13</p>
+            </div>
+            <div class="bg-gray-800 p-8 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+                <h3 class="text-xl font-semibold mb-2">Higher Secondary School Certificate (HSSC)</h3>
+                <p>Delhi Public School, Vidyut Nagar, Dadri - 201008</p>
+                <p>Percentage: 89.4%</p>
+            </div>
+            <div class="bg-gray-800 p-8 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+                <h3 class="text-xl font-semibold mb-2">Secondary School Certificate (SSC)              </h3>
+                <br>
+                <p>Delhi Public School, Vidyut Nagar, Dadri - 201008</p>
+                <p>Percentage: 86.4%</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <!-- Projects Section -->
+    <section id="projects" class="text-center py-8 scroll-mt-16">
+        <h2 class="text-3xl font-bold mb-6 text-blue-400">Projects <span class="text-blue-600">&#x2705;</span></h2>
+        <div class="space-y-6 px-8">
+            <!-- Project 1 -->
+            <div class="bg-gray-700 p-4 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 max-w-xl mx-auto">
+                <h3 class="text-lg font-bold text-white">Router 1x3 Design and Verification</h3>
+                <p class="mt-2 text-gray-300 text-sm">
+                    Designed a 1x3 Router for efficient packet routing in digital systems. 
+                    Simulations performed in Xilinx, ensuring robust design and fault coverage.
+                </p>
+            </div>
+            <!-- Project 2 -->
+            <div class="bg-gray-700 p-4 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 max-w-xl mx-auto">
+                <h3 class="text-lg font-bold text-white">Booth Multiplier</h3>
+                <p class="mt-2 text-gray-300 text-sm">
+                    Implemented a Booth Multiplier using Verilog for high-performance arithmetic operations. 
+                    Verified and simulated using Xilinx Vivado, ensuring accuracy and efficiency in multiplication operations.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="text-center py-8 scroll-mt-16">
+        <h2 class="text-3xl font-bold mb-6 text-blue-400">Skills <span class="text-blue-600">&#x2705;</span></h2>
+        <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-8"> -->
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Skill Cards -->
+            <div class="skill-card bg-gray-800 p-6 rounded-lg">
+                <h3 class="text-xl font-bold">Verilog</h3>
+                <p class="skill-description mt-2 text-gray-400">Proficient in hardware description language for digital design.</p>
+            </div>
+            <div class="skill-card bg-gray-800 p-6 rounded-lg">
+                <h3 class="text-xl font-bold">C/C++ Programming</h3>
+                <p class="skill-description mt-2 text-gray-400">Experienced in programming for various applications.</p>
+            </div>
+            <div class="skill-card bg-gray-800 p-6 rounded-lg">
+                <h3 class="text-xl font-bold">System Verilog</h3>
+                <p class="skill-description mt-2 text-gray-400">Knowledgeable in advanced hardware design verification.</p>
+            </div>
+            <div class="skill-card bg-gray-800 p-6 rounded-lg">
+                <h3 class="text-xl font-bold">Digital Systems</h3>
+                <p class="skill-description mt-2 text-gray-400">Skilled in designing and implementing digital systems.</p>
+            </div>
+            <div class="skill-card bg-gray-800 p-6 rounded-lg">
+                <h3 class="text-xl font-bold">MATLAB</h3>
+                <p class="skill-description mt-2 text-gray-400">Experience with MATLAB for simulations and analysis.</p>
+            </div>
+            <div class="skill-card bg-gray-800 p-6 rounded-lg">
+                <h3 class="text-xl font-bold">Xilinx Vivado</h3>
+                <p class="skill-description mt-2 text-gray-400">Proficient in using Vivado for FPGA design.</p>
+            </div>
+            <div class="skill-card bg-gray-800 p-6 rounded-lg">
+                <h3 class="text-xl font-bold">RTL Design</h3>
+                <p class="skill-description mt-2 text-gray-400">Expertise in RTL design and verification processes.</p>
+            </div>
+            <div class="skill-card bg-gray-800 p-6 rounded-lg">
+                <h3 class="text-xl font-bold">Linux Commands</h3>
+                <p class="skill-description mt-2 text-gray-400">Familiar with basic Linux commands</p>
+            </div>
+            <div class="skill-card bg-gray-800 p-6 rounded-lg">
+                <h3 class="text-xl font-bold">ASIC</h3>
+                <p class="skill-description mt-2 text-gray-400">Application-specific integrated circuits design.</p>
+            </div>
+            <div class="skill-card bg-gray-800 p-6 rounded-lg">
+                <h3 class="text-xl font-bold">Modelsim</h3>
+                <p class="skill-description mt-2 text-gray-400">Experience with simulation using Modelsim.</p>
+            </div>
+            <div class="skill-card bg-gray-800 p-6 rounded-lg">
+                <h3 class="text-xl font-bold">Cadence Virtuoso</h3>
+                <p class="skill-description mt-2 text-gray-400">Hands-on with Cadence Virtuoso for RTL design.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900 text-gray-300 text-center">
+        <h3 class="text-3xl font-bold mb-8 text-blue-400">Contact Me</h3>
+        <div class="max-w-4xl mx-auto space-y-4">
+            <p class="text-lg">Feel free to reach out through any of the following methods:</p>
+            <div class="flex justify-center space-x-6 text-white">
+                <span class="bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 flex items-center">
+                    <span class="mr-2">&#9993;</span>gaurav.singh2022@vitstudent.ac.in
+                </span>
+                <span class="bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 flex items-center">
+                    <span class="mr-2">&#9742;</span>7428970498
+                </span>
+                <span class="bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 flex items-center">
+                    <span class="mr-2">&#128100;</span>www.linkedin.com/in/gaurav-singh-806616252
+                </span>
+                <span class="bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 flex items-center">
+                    <span class="mr-2">&#128100;</span>https://github.com/gaurav-singh2004
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-gray-800 text-gray-400">
+        <p>&copy; 2024 Gaurav Singh. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+
+    
