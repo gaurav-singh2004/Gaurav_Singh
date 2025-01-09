@@ -17,7 +17,7 @@
 <h2>🚀 About Me</h2>
 <ul>
   <li>🔬 Co-authored a research paper: <i>Unleashing Gammatone Visualizations for Cough Sound Classification</i>.</li>
-  <li>🎓 Current CGPA: 9.13</li>
+  <li>🎓 Current CGPA: 9.26</li>
   <li>⚡ Skills: Verilog, System Verilog, C/C++, FPGA, MATLAB, Digital System Design, and more.</li>
   <li>📊 Trainee in Advanced VLSI Design and Verification at Maven Silicon.</li>
 </ul>
