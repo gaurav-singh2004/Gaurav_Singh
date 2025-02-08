@@ -23,6 +23,4 @@
 </ul>
 
 <h2>✨ Let's Connect</h2>
-<p>
-  Whether you're looking for collaboration, mentorship, or just want to say hi, feel free to reach out!
-</p>
+
